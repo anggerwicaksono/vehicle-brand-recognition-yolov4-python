@@ -30,6 +30,9 @@ class Classifier():
         # cv2 read shape is NHWC, Tensor's need is NCHW,transpose it
         image = image.transpose((2, 0, 1))
 
+	# convert image to float32 instead of float64, otherwise MNN will throw an error
+        image = image.astype(np.float32)
+
         # construct tensor from np.ndarray
         tmp_input = MNN.Tensor((1, 3, 224, 224), MNN.Halide_Type_Float, image, MNN.Tensor_DimensionType_Caffe)
         self.input_tensor.copyFrom(tmp_input)
