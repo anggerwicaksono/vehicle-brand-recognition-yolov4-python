@@ -6,6 +6,8 @@
 
 A Python example for using [Spectrico's car brand classifier](http://spectrico.com/car-make-model-recognition.html). It consists of an object detector for finding the cars, and a classifier to recognize the brands of the detected cars. The object detector is an implementation of YOLOv4 (OpenCV DNN backend). YOLOv4 weights were downloaded from [AlexeyAB/darknet](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights). The classifier is based on MobileNet v3 (Alibaba MNN backend).
 
+Web demo: [Vehicle Make and Color Recognition](http://spectrico.com/demo-car-brand-recognition.html)
+
 The full version recognizes the make, model, and color of the vehicles. Here is a web demo to test it: [Vehicle Make and Model Recognition](http://spectrico.com/demo-car-mmr.html)
 
 ---
