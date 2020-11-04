@@ -30,7 +30,7 @@ class Classifier():
         # cv2 read shape is NHWC, Tensor's need is NCHW,transpose it
         image = image.transpose((2, 0, 1))
 
-	# convert image to float32 instead of float64, otherwise MNN will throw an error
+        # convert image to float32 instead of float64, otherwise MNN will throw an error
         image = image.astype(np.float32)
 
         # construct tensor from np.ndarray
@@ -39,6 +39,8 @@ class Classifier():
         self.interpreter.runSession(self.session)
         output_tensor = self.interpreter.getSessionOutput(self.session)
         preds = output_tensor.getData()
+        if isinstance(preds, np.ndarray):
+            preds = preds[0]
 
         top = 3
         top_indices = np.array(preds).argsort()[-top:][::-1]
