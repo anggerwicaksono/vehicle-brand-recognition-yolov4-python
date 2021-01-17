@@ -26,9 +26,10 @@ def main():
     # Render the readme as markdown using st.markdown.
     st.write("""
     # CCD Car Color Detection
-    Implementation of AI Object Detection using YOLOv4 (OpenCV2 DNN backend) on Streamlit
-    (code forked from https://github.com/spectrico/car-color-classifier-yolo4-python)
-    
+    Implementation of AI Object Detection using YOLOv4 (OpenCV2 DNN and MNN backend) on Streamlit
+    (code forked from :
+    https://github.com/spectrico/car-color-classifier-yolo4-python
+    https://github.com/spectrico/vehicle-brand-recognition-yolov4-python)
     """)
 
     # Download external dependencies.
@@ -79,7 +80,7 @@ def download_file(file_path):
 def run_the_app():
     uf = st.sidebar.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "webp"])
     st.sidebar.write("""
-    [[Open in Github]](https://github.com/anggerwicaksono/car-color-classifier-yolo4-python.git)
+    [[Open in Github]](https://github.com/anggerwicaksono/vehicle-brand-recognition-yolov4-python)
     """)
     ap = argparse.ArgumentParser()
     ap.add_argument("-y", "--yolo", default='yolov4', help="base path to YOLO directory")
