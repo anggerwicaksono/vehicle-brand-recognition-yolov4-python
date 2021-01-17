@@ -11,6 +11,8 @@ import cv2
 import os
 import color_classifier
 import make_classifier
+import streamlit as st
+import urllib
 
 st.sidebar.header('Features Setting')
 values = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
