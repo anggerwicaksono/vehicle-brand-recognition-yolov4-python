@@ -25,7 +25,7 @@ tres = st.sidebar.selectbox('Treshold Value (default 0.3)', values, index=def_tr
 def main():
     # Render the readme as markdown using st.markdown.
     st.write("""
-    # CCD Car Make and Color Detection
+    # CMCD Car Make and Color Detection
     Implementation of AI Object Detection using YOLOv4
     
     (OpenCV2 DNN and MNN backend) on Streamlit
