@@ -152,7 +152,7 @@ def run_the_app():
                     resultC = car_color_classifier.predict(image[max(y, 0):y + h, max(x, 0):x + w])
                     resultM = car_make_classifier.predict(image[max(y, 0):y + h, max(x, 0):x + w])
                     textC = "{}: {:.4f}".format(resultC[0]['color'], float(resultC[0]['prob']))
-                    textM = "{}: {:.4f}".format(resultM[0]['color'], float(resultM[0]['prob']))
+                    textM = "{}: {:.4f}".format(resultM[0]['brand'], float(resultM[0]['prob']))
                     cv2.putText(image, textC, (x + 2, y + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
                     cv2.putText(image, textM, (x + 2, y + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
                 cv2.rectangle(image, (x, y), (x + w, y + h), color, 2)
