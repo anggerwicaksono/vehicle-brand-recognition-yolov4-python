@@ -1,0 +1,6 @@
+opencv_python==4.5.1.48
+tensorflow==2.4.0
+numpy==1.19.2
+streamlit==0.74.1
+Pillow==8.1.0
+MNN==1.1.0
